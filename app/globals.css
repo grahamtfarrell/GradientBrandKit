@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+:root {
+  --black: #0d0d0d;
+  --eggshell: #f9f9f9;
+  --navy: #01184d;
+  --royal: #0e389b;
+  --dusk: #5566c6;
+  --tang: #6684db;
+  --orchard: #9a9ad9;
+  --sunrise: #c7c4ef;
+  --citrus: #ff5a17;
+  --honey: #ffaa17;
+  --butter: #ffdc17;
+  --peach: #efb4c8;
+  --lychee: #f5e5d6;
+  --ink: #0d0d0d;
+  --muted: #8a8a8a;
+  --hairline: #e4e4e4;
+  --canvas: #f7f7f7;
+  --background: var(--canvas);
+  --foreground: var(--ink);
+}
+
+@theme inline {
+  --color-black: var(--black);
+  --color-canvas: var(--canvas);
+  --color-navy: var(--navy);
+  --color-royal: var(--royal);
+  --color-dusk: var(--dusk);
+  --color-tang: var(--tang);
+  --color-orchard: var(--orchard);
+  --color-sunrise: var(--sunrise);
+  --color-citrus: var(--citrus);
+  --color-honey: var(--honey);
+  --color-butter: var(--butter);
+  --color-peach: var(--peach);
+  --color-lychee: var(--lychee);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-hairline: var(--hairline);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background: #f7f7f7;
+  color: var(--ink);
+  font-family: var(--font-geist-sans), Helvetica, Arial, sans-serif;
+}
+
+.nav-helvetica {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.nav-box {
+  overflow: auto;
+  border-radius: 0.5rem;
+}
+
+.nav-title {
+  font-weight: 400;
+}
+
+.nav-thin {
+  font-weight: 100;
+}
+
+body {
+  min-height: 100%;
+}
+
+::selection {
+  background: var(--sunrise);
+  color: var(--navy);
+}
+
+.hero-title {
+  font-size: clamp(2.75rem, 11vh, 8rem);
+  line-height: 0.9;
+  animation: hero-slide 1.15s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+@keyframes hero-slide {
+  from {
+    opacity: 0;
+    transform: translateX(-2.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-title {
+    animation: none;
+  }
+}
+
+.bg-section-active {
+  background: linear-gradient(90deg, #000000 0%, #01184d 48%, #0e389b 100%);
+}
