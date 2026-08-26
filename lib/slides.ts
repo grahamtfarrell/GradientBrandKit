@@ -82,8 +82,9 @@ export const SLIDES: Slide[] = [
 
 export const SLIDE_WIDTH = 3611;
 export const SLIDE_HEIGHT = 2031;
-export const DOWNLOAD_HREF = "/downloads/gradient-brandkit.zip";
-export const DOWNLOAD_FILENAME = "Gradient MGMT.zip";
+export const DOWNLOAD_HREF =
+  "https://github.com/grahamtfarrell/GradientBrandKit/releases/download/brandkit/Gradient-MGMT.zip";
+export const DOWNLOAD_FILENAME = "Gradient-MGMT.zip";
 
 export function slideSrc(id: number) {
   return `/slides/${String(id).padStart(2, "0")}.webp`;
